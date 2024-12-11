@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
+from io import BytesIO  # 이 부분을 추가했습니다
 
 def resize_image(image, scale_factor=2):
     """
@@ -65,12 +66,12 @@ def main():
         # Display original image
         with col1:
             st.subheader("Original Image")
-            st.image(original_image, use_column_width=True)
+            st.image(original_image, use_container_width=True)
         
         # Display resized image
         with col2:
             st.subheader(f"Resized Image (x{resize_option})")
-            st.image(resized_image, use_column_width=True)
+            st.image(resized_image, use_container_width=True)
         
         # Download button for resized image
         buffered = BytesIO()
