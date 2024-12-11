@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
-import numpy as np
-from io import BytesIO  # 이 부분을 추가했습니다
+from io import BytesIO
 
 def resize_image(image, scale_factor=2):
     """
